@@ -5,6 +5,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const workoutRoutes = require('./routes/workouts');
+const userRoutes = require('./routes/user');
 
 // express app 만들기
 const app = express();
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 
 // routes
 app.use('/api/workouts', workoutRoutes);
+app.use('/api/user', userRoutes);
 // 1st arguement :
 // grab all workoutRoutes and use it
 
